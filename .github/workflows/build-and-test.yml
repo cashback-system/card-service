@@ -45,6 +45,7 @@ jobs:
 
       - name: Git submodule update
         run: |
+          git submodule add https://github.com/cashback-system/transfer-contract.git ./src/submodules/transfer-contract
           git submodule update --init --remote --recursive
           cd ./src/submodules/transfer-contract
           echo ${GITHUB_REF##*/}
